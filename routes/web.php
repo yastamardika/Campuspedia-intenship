@@ -12,5 +12,12 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('pages.index');
+});
+
+Route::get('/tambah','AdminController@tambah');
+Route::post('/tambah/store , AdminController@store');
+Route::get('/edit','AdminController@edit');
+Route::get('/admin', function () {
+    return view('admin');
 });
