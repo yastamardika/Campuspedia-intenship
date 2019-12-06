@@ -11,13 +11,13 @@
 |
 */
 
-Route::get('/', function () {
-    return view('pages.index');
-});
+Route::get('/', 'AdminController@index');
+
 
 Route::get('/tambah','AdminController@tambah');
-Route::post('/tambah/store , AdminController@store');
-Route::get('/edit','AdminController@edit');
+Route::get('/edit/{id}','AdminController@edit');
+Route::post('store','AdminController@store');
+Route::post('edit','AdminController@updatedata');
 Route::get('/admin', function () {
     return view('admin');
 });
