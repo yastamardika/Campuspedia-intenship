@@ -16,44 +16,32 @@
                             <th>
                                 Phone
                             </th>
-                            <th class="text-right">
+                            <th>
                                 Email
+                            </th>
+                            <th >
+                                Action
                             </th>
                         </thead>
                         <tbody>
+                            @foreach ($siswa as $s)
                             <tr>
                                 <td>
-                                    Dakota Rice
+                                    {{ $s->Nama  }}
                                 </td>
                                 <td>
-                                    Niger
+                                    {{ $s->no_hp }}
                                 </td>
-                                <td class="text-right">
-                                    $36,738
+                                <td>
+                                   {{ $s->email }}
+                                </td>
+                                <td>
+                                    <a href="/edit/{{ $s->id }}">Edit</a>
+                                    <a href="/hapus/{{ $s->id }}">Hapus</a>
                                 </td>
                             </tr>
-                            <tr>
-                                <td>
-                                    Dakota Rice
-                                </td>
-                                <td>
-                                    Niger
-                                </td>
-                                <td class="text-right">
-                                    $36,738
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    Dakota Rice
-                                </td>
-                                <td>
-                                    Niger
-                                </td>
-                                <td class="text-right">
-                                    $36,738
-                                </td>
-                            </tr>
+                            @endforeach
+
                         </tbody>
                     </table>
                 </div>

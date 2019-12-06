@@ -6,7 +6,7 @@
           <p>Dashboard</p>
         </a>
       </li>
-      <li class="{{ (request()->is('/tambah*')) ? 'active' : '' }}">
+      <li class="{{ (request()->is('/tambah* ')) ? 'active' : '' }}">
         <a href="/tambah">
           <i class="nc-icon nc-simple-add"></i>
           <p>Tambah</p>
