@@ -29,14 +29,14 @@ class AdminController extends Controller
 
     }
 
-    public function updatedata(Request $request ,$id)
+    public function updatedata(Request $request)
     {
-        $siswa = Siswa::findOrFail($id);
-        $siswa->Nama = $request->Nama;
-    	$siswa->no_hp = $request->no_hp;
-    	$siswa->email = $request->email;
-        $siswa->save();
-        return response()->json($siswa);
+        DB::table('siswa')->where('id',$request->id)->update([
+            'Nama' => $request->Nama,
+            'no_hp' =>$request->no_hp,
+			'email' => $request->email,
+		]);
+        return redirect('/');
     }
 
     public function hapusdata($id)

@@ -9,10 +9,7 @@
             <div class="card-body">
                 @foreach ($siswa as $s)
 
-                <form method="post" action="/edit/{id}/update" enctype="multipart/form-data">{{ csrf_field() }}
-                    <div>
-                        <input type="hidden" id="upid" value="{{ $s->id }}">
-                    </div>
+                <form method="post" action="/edit/update">{{ csrf_field() }}
                     <div class="row">
                         <div class="col-md-6 pr-1">
                             <div class="form-group">
@@ -53,11 +50,11 @@
         </div>
     </div>
 </div>
-<script type="text/javascript">
+{{-- <script type="text/javascript">
     $('#update').click(function(){
 					$.ajax({
 						type:'post',
-						url: '/edit/{id}/update',
+						url: '/edit/update',
 						data:{
                             '_token':$('input[name=_token').val(),
                             'id':$('#upid').val(),
@@ -70,5 +67,5 @@
 						},
 					});
 				});
-</script>
+</script> --}}
 @endsection

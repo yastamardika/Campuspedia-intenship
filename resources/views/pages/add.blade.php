@@ -12,7 +12,7 @@
                         <div class="col-md-6 pr-1">
                             <div class="form-group">
                                 <label>Nama</label>
-                                <input type="text" class="form-control" placeholder="nama" name="Nama" value="Yasta">
+                                <input type="text" class="form-control" placeholder="nama" name="Name" value="Your Name">
                             </div>
                         </div>
                     </div>
@@ -20,7 +20,7 @@
                         <div class="col-md-12">
                             <div class="form-group">
                                 <label>Phone Number</label>
-                                <input type="number" name="no_hp" class="form-control"  placeholder="No Hp" value="089536842449">
+                                <input type="number" name="no_hp" class="form-control"  placeholder="Phone Number" value="Your Phone Number">
                             </div>
                         </div>
                     </div>
@@ -28,7 +28,7 @@
                         <div class="col-md-12">
                             <div class="form-group">
                                 <label>Email</label>
-                                <input type="text" name="email" class="form-control" placeholder="email" value="Yasta@gmail">
+                                <input type="text" name="email" class="form-control" placeholder="email" value="Your Email">
                             </div>
                         </div>
                     </div>
