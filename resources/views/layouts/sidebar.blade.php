@@ -6,14 +6,14 @@
           <p>Dashboard</p>
         </a>
       </li>
-      <li class="{{ (request()->is('/tambah* ')) ? 'active' : '' }}">
+      <li {{ (request()->is('/tambah* ')) ? 'class="active"' : '' }}>
         <a href="/tambah">
           <i class="nc-icon nc-simple-add"></i>
           <p>Tambah</p>
         </a>
       </li>
-      <li class="{{ (request()->is('/edit')) ? 'active' : '' }}">
-        <a href="/edit">
+      <li {{ (request()->is('/edit/{id}')) ? 'style=opacity:1;' : 'style=opacity:0;' }}>
+        <a href="">
           <i class="nc-icon nc-ruler-pencil"></i>
           <p>Edit</p>
         </a>

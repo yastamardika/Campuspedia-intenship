@@ -20,7 +20,7 @@
                         <div class="col-md-12">
                             <div class="form-group">
                                 <label>Phone Number</label>
-                                <input type="number" name="no_hp" class="form-control"  placeholder="No Hp" value="255">
+                                <input type="number" name="no_hp" class="form-control"  placeholder="No Hp" value="089536842449">
                             </div>
                         </div>
                     </div>

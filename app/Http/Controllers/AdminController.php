@@ -25,24 +25,24 @@ class AdminController extends Controller
     	$siswa->no_hp = $request->no_hp;
     	$siswa->email = $request->email;
     	$siswa->save();
-        return response()->json($siswa);
-
-    }
-
-    public function updatedata(Request $request)
-    {
-    	$siswa = Siswa::where('id',$request->id)->update([
-            'Nama' => $request->Nama ,
-            'no_hp' => $request->no_hp,
-            'email' => $request->email
-        ]);
         return redirect('/');
+
     }
 
-    public function deletedata(Request $request)
+    public function updatedata(Request $request ,$id)
     {
-    	Siswa::where('id',$request->id)->delete();
-    	return response()->json();
+        $siswa = Siswa::findOrFail($id);
+        $siswa->Nama = $request->Nama;
+    	$siswa->no_hp = $request->no_hp;
+    	$siswa->email = $request->email;
+        $siswa->save();
+        return response()->json($siswa);
+    }
+
+    public function hapusdata($id)
+    {
+    	Siswa::where('id',$id)->delete();
+    	return redirect('/');
     }
 
     public function edit($id){

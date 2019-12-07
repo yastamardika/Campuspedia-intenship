@@ -19,11 +19,12 @@
                             <th>
                                 Email
                             </th>
-                            <th >
+                            <th>
                                 Action
                             </th>
                         </thead>
                         <tbody>
+                                {{ csrf_field() }}
                             @foreach ($siswa as $s)
                             <tr>
                                 <td>
@@ -33,11 +34,12 @@
                                     {{ $s->no_hp }}
                                 </td>
                                 <td>
-                                   {{ $s->email }}
+                                    {{ $s->email }}
                                 </td>
                                 <td>
                                     <a href="/edit/{{ $s->id }}">Edit</a>
-                                    <a href="/hapus/{{ $s->id }}">Hapus</a>
+                                    <a href="/hapus/{{ $s->id }}" id="delete">Hapus</a>
+
                                 </td>
                             </tr>
                             @endforeach
@@ -49,4 +51,19 @@
         </div>
     </div>
 </div>
+<script>
+    $('#delete').click(function(){
+					$.ajax({
+						type:'post',
+						url: '/hapus/{id}',
+						data:{
+							'_token':$('input[name=_token').val(),
+							'id':$('#delid').val(),
+						},
+						success:function(data){
+							window.location.reload();
+						},
+					});
+				})
+</script>
 @endsection
