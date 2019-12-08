@@ -10,6 +10,7 @@
                 @foreach ($siswa as $s)
 
                 <form method="post" action="/edit/update">{{ csrf_field() }}
+                    <input type="hidden" name="id" value="{{ $s->id }}">
                     <div class="row">
                         <div class="col-md-6 pr-1">
                             <div class="form-group">
